@@ -1,2 +1,18 @@
-<h1>Cocktail#new</h1>
-<p>Find me in app/views/cocktail/new.html.erb</p>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-6 bg-light p-5 border">
+      <h1 class="pb-3">Create a new cocktail</h1>
+
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, placeholder: 'Insert cocktail name'  %>
+
+        <i class="fas fa-plus pt-5"></i><%= f.submit class: 'btn btn-success' %>
+      <% end %>
+      <p> <i class="fas fa-undo-alt pt-4"><%= link_to 'Go back', cocktails_path, class: 'btn btn-primary' %></i></p>
+    </div>
+  </div>
+</div>
+
+
+
+

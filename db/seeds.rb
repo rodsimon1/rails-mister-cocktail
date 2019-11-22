@@ -10,17 +10,21 @@
 require 'json'
 require 'open-uri'
 
-puts "Fetching Ingredients"
+# puts "Fetching Ingredients"
 
-url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-user_serialized = open(url).read
-user = JSON.parse(user_serialized)
-user.each do |k, v|
-  v.each do |drink|
-    Ingredient.create(name: drink['strIngredient1'])
-  end
-end
+# url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# user_serialized = open(url).read
+# user = JSON.parse(user_serialized)
+# user.each do |k, v|
+#   v.each do |drink|
+#     Ingredient.create(name: drink['strIngredient1'])
+#   end
+# end
 
-puts "DONE"
+# puts "DONE"
 
 
+
+Cocktail.create(name: "Caipirinha")
+Cocktail.create(name: "Bloody Mary")
+Cocktail.create(name: "Pina Colada")
